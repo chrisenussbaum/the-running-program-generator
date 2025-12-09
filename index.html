@@ -11,12 +11,24 @@
 <body>
 
   <header>
-    <h1>🏃 Running Program Generator</h1>
+    <h1>🏃 Personalized Running Program Generator</h1>
+    <p>Generates a structured weekly plan based on your current fitness and goals.</p>
   </header>
 
   <main>
     <section id="input-section">
       <h2>Enter Your Parameters</h2>
+
+      <label for="fiftkTime">Fastest 5K Time (MM:SS, e.g., 20:30):</label>
+      <input type="text" id="fiftkTime" value="20:00" placeholder="MM:SS">
+
+      <label for="trainingDays">Training Days Per Week:</label>
+      <select id="trainingDays">
+                <option value="5">5 Days</option>
+                <option value="6" selected>6 Days</option>
+                <option value="7">7 Days</option>
+            </select>
+
       <label for="weeklyMileage">Target Weekly Mileage (e.g., 35):</label>
       <input type="number" id="weeklyMileage" value="35" min="5">
 
@@ -40,7 +52,7 @@
         <thead>
           <tr>
             <th>Day</th>
-            <th>Focus</th>
+            <th>Focus & Pace</th>
             <th>Mileage (approx)</th>
           </tr>
         </thead>
@@ -56,7 +68,7 @@
       <div class="routine-group">
         <h3>Strides / Core (Mon/Wed/Fri)</h3>
         <ul>
-          <li><b>Strides:</b> 4</li>
+          <li><b>Strides: 4</li>
           <li><b>Planks:</b> 30 - 60 sec each side</li>
           <li><b>Grass Pickers:</b> 20 - 40</li>
           <li><b>Windshield Wipers:</b> 10 - 20</li>
