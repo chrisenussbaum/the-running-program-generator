@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Running Program</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>🏃 Running Program Generator</h1>
+  </header>
+
+  <main>
+    <section id="input-section">
+      <h2>Enter Your Parameters</h2>
+      <label for="weeklyMileage">Target Weekly Mileage (e.g., 35):</label>
+      <input type="number" id="weeklyMileage" value="35" min="5">
+
+      <label for="trainingPhase">Select Training Phase:</label>
+      <select id="trainingPhase">
+                <option value="BASE">BASE (Building Endurance)</option>
+                <option value="STRENGTH">STRENGTH (Focused Workouts)</option>
+                <option value="PEAK">PEAK (Highest Volume)</option>
+                <option value="TAPER">TAPER (Reducing Volume)</option>
+            </select>
+
+      <button onclick="generateProgram()">Generate Program</button>
+    </section>
+
+    <hr>
+
+    <section id="weekly-schedule">
+      <h2>Weekly Running Schedule</h2>
+      <p id="schedule-note"></p>
+      <table id="schedule-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Focus</th>
+            <th>Mileage (approx)</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="core-strength">
+      <h2>Core, Strides, and Band Routines</h2>
+      <div class="routine-group">
+        <h3>Strides / Core (Mon/Wed/Fri)</h3>
+        <ul>
+          <li><b>Strides:</b> 4</li>
+          <li><b>Planks:</b> 30 - 60 sec each side</li>
+          <li><b>Grass Pickers:</b> 20 - 40</li>
+          <li><b>Windshield Wipers:</b> 10 - 20</li>
+          <li><b>Crunches:</b> 20 - 30 each side</li>
+          <li><b>Flutter Kicks:</b> 30 - 60 seconds</li>
+          <li><b>Mountain Climbers:</b> 30 - 60 seconds</li>
+          <li><b>Push-Ups:</b> 15 - 25</li>
+        </ul>
+      </div>
+      <div class="routine-group">
+        <h3>Band / Stretches (Tue/Thu)</h3>
+        <ul>
+          <li><b>Donkey Kicks:</b> x15</li>
+          <li><b>Reverse Clamshells:</b> x15</li>
+          <li><b>Clamshells:</b> x15</li>
+          <li><b>Fire Hydrant:</b> x15</li>
+          <li><b>Leg Raises:</b> x15</li>
+          <li><b>Side Steps (knees):</b> x15</li>
+          <li><b>Side Steps (ankles):</b> x15</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
