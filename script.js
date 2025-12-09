@@ -72,7 +72,7 @@ function generateProgram() {
   let weeklyPlan = [
     // Percentages approximate the 12%, 18%, 12%, 12%, 18%, 28% distribution (total 100%)
     { day: "Monday", focus: `Easy Run (${fp.easyLongPace}/mile) + Core/Strides`, percent: 0.17, isRun: true }, // 12% + 5% bump
-    { day: "Tuesday", focus: `Threshold Repeats (e.g., $4 \times 1$-mile @ ${fp.thresholdPace}/mile) + Bands`, percent: 0.18, isRun: true },
+    { day: "Tuesday", focus: `Threshold Repeats (e.g., 4 \times 1-mile @ ${fp.thresholdPace}/mile) + Bands`, percent: 0.18, isRun: true },
     { day: "Wednesday", focus: `Easy/Recovery Run (${fp.easyLongPace}/mile) + Core/Strides`, percent: 0.17, isRun: true }, // 12% + 5% bump
     { day: "Thursday", focus: `Tempo Run (${fp.tempoPace}/mile) + Bands`, percent: 0.17, isRun: true }, // 12% + 5% bump
     { day: "Friday", focus: `Easy Run (${fp.easyLongPace}/mile) + Core/Strides`, percent: 0.18, isRun: true },
@@ -109,18 +109,18 @@ function generateProgram() {
   switch (phaseInput) {
     case 'BASE':
       phaseFocus = "Focus on Easy effort and building distance. Speed work is controlled Fartlek.";
-      weeklyPlan[1].focus = `Light Fartlek (e.g., $5 \times 2$-min hard @ ${fp.intervalPace}/mile) + Bands`;
+      weeklyPlan[1].focus = `Light Fartlek (e.g., 5 \times 2-min hard @ ${fp.intervalPace}/mile) + Bands`;
       weeklyPlan[3].focus = `Tempo Run (short duration) @ ${fp.tempoPace}/mile + Bands`;
       break;
     case 'STRENGTH':
       phaseFocus = "Focus on Threshold and Tempo volume. Speed work introduces longer repeats (e.g., 1000s).";
-      weeklyPlan[1].focus = `Threshold Repeats (e.g., $4 \times 1000$-m @ ${fp.thresholdPace}/mile) + Bands`;
+      weeklyPlan[1].focus = `Threshold Repeats (e.g., 4 \times 1000$-m @ ${fp.thresholdPace}/mile) + Bands`;
       weeklyPlan[3].focus = `Longer Tempo Run (e.g., 4 miles @ ${fp.tempoPace}/mile) + Bands`;
       break;
     case 'PEAK':
       phaseFocus = "Focus on Race Pace (Intervals) and maintenance. Highest volume week.";
-      weeklyPlan[1].focus = `Intervals (e.g., $6 \times 800$-m @ ${fp.intervalPace}/mile) + Bands`;
-      weeklyPlan[3].focus = `Threshold Repeats (e.g., $3 \times 1$-mile @ ${fp.thresholdPace}/mile) + Bands`;
+      weeklyPlan[1].focus = `Intervals (e.g., 6 \times 800m @ ${fp.intervalPace}/mile) + Bands`;
+      weeklyPlan[3].focus = `Threshold Repeats (e.g., 3 \times 1-mile @ ${fp.thresholdPace}/mile) + Bands`;
       break;
     case 'TAPER':
       phaseFocus = "Focus on rest and reduced volume (~40% reduction). Keep strides sharp.";
