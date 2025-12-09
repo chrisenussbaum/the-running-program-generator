@@ -114,12 +114,12 @@ function generateProgram() {
       break;
     case 'STRENGTH':
       phaseFocus = "Focus on Threshold and Tempo volume. Speed work introduces longer repeats (e.g., 1000s).";
-      weeklyPlan[1].focus = `Threshold Repeats (e.g., 4 \times 1000$-m @ ${fp.thresholdPace}/mile) + Bands`;
+      weeklyPlan[1].focus = `Threshold Repeats (e.g., 4 \times 1000-m @ ${fp.thresholdPace}/mile) + Bands`;
       weeklyPlan[3].focus = `Longer Tempo Run (e.g., 4 miles @ ${fp.tempoPace}/mile) + Bands`;
       break;
     case 'PEAK':
       phaseFocus = "Focus on Race Pace (Intervals) and maintenance. Highest volume week.";
-      weeklyPlan[1].focus = `Intervals (e.g., 6 \times 800m @ ${fp.intervalPace}/mile) + Bands`;
+      weeklyPlan[1].focus = `Intervals (e.g., 6 \times 800-m @ ${fp.intervalPace}/mile) + Bands`;
       weeklyPlan[3].focus = `Threshold Repeats (e.g., 3 \times 1-mile @ ${fp.thresholdPace}/mile) + Bands`;
       break;
     case 'TAPER':
